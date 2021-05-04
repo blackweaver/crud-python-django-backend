@@ -1,9 +1,20 @@
-# @Python
+# CRUD
+
+Este es el backend construido en python, django (API) y SQL server (DB) el que será implementado por un [front Angular](https://github.com/blackweaver/crud-angular-front).
+
+# Python
+
+## Instalar python
+
+https://www.python.org/downloads/
 
 ## Creo entorno virtual para correr el proyecto
 
 `python3 -m ven myenv
 source ../myenv/bin/activate`
+
+
+# Django
 
 ## Instalar Django
 
