@@ -325,3 +325,30 @@ def SaveFile(request):
     return JsonResponse(file_name,safe=False)
 
 ```
+
+
+## Desplegar en producción
+
+www.pythonanywhere.com
+
+* Crear un bash console para crear un entorno virtual
+
+```python
+mkvirtualenv --python=3.9 django3
+deactivate
+source ~/.virtualenvs/django3/bin/activate
+pip list
+```
+
+### Crear requirements
+
+```python
+pip freeze > requirements.txt
+```
+
+asgiref==3.3.1
+Django==3.1.7
+django-cors-headers==3.7.0
+djangorestframework==3.12.2
+pytz==2021.1
+sqlparse==0.4.1
