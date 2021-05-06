@@ -352,3 +352,51 @@ django-cors-headers==3.7.0
 djangorestframework==3.12.2
 pytz==2021.1
 sqlparse==0.4.1
+
+### Clonar repositorio dentro del bash
+
+git clone https://github.com/blackweaver/crud-python-django-backend.git
+
+### Deploy
+
+```python
+python3 manage.py check --deploy
+```
+
+### Agregar los dominios permitidos al archivo settings
+
+```python
+ALLOWED_HOSTS = ['blackweaver.pythonanywhere.com','management-company.netlify.app','localhost','127.0.0.1']
+```
+
+### Crear APP en web, insertar el source code y el virtualenv
+
+```python
+pwd
+```
+Source code: /home/blackweaver/crud-python-django-backend
+
+```python
+which python
+```
+virtualenv: /home/blackweaver/.virtualenvs/django3   
+
+### Editar blackweaver_pythonanywhere_com_wsgi.py
+
+```python
+import os
+import sys
+
+path = os.path.expanduser('~/crud-python-django-backend')
+if path not in sys.path:
+    sys.path.insert(0, path)
+os.environ['DJANGO_SETTINGS_MODULE'] = 'DjangoAPI.settings'
+from django.core.wsgi import get_wsgi_application
+from django.contrib.staticfiles.handlers import StaticFilesHandler
+application = StaticFilesHandler(get_wsgi_application())
+```
+
+### URL de la API
+
+blackweaver.pythonanywhere.com
+
