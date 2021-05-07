@@ -379,7 +379,12 @@ Source code: /home/blackweaver/crud-python-django-backend
 ```python
 which python
 ```
-virtualenv: /home/blackweaver/.virtualenvs/django3   
+virtualenv: /home/blackweaver/.virtualenvs/django3
+
+### Editar media files
+
+url: /media/
+path: /home/blackweaver/crud-python-django-backend/media/
 
 ### Editar blackweaver_pythonanywhere_com_wsgi.py
 
@@ -398,5 +403,6 @@ application = StaticFilesHandler(get_wsgi_application())
 
 ### URL de la API
 
-blackweaver.pythonanywhere.com
+http://blackweaver.pythonanywhere.com/employee/
+http://blackweaver.pythonanywhere.com/department/
 
